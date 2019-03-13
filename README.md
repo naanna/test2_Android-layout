@@ -1,6 +1,5 @@
 #  实验二_Android布局 
 1.  利用线性布局实现如下界面：
-
 ![first](https://wx2.sinaimg.cn/mw690/e9e52fd7gy1g113bsf1vvj20gk06adg1.jpg)
 
     1. 关键代码：
