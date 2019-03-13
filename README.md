@@ -1,6 +1,8 @@
 #  实验二_Android布局 
 1.  利用线性布局实现如下界面：
+
 ![first](https://wx2.sinaimg.cn/mw690/e9e52fd7gy1g113bsf1vvj20gk06adg1.jpg)
+
     1. 关键代码：
     ```xml
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -125,10 +127,14 @@
         </LinearLayout>
     </LinearLayout>
     ```
-    1. 模拟器截图：![first ans](https://wx1.sinaimg.cn/mw690/e9e52fd7gy1g1138t1xtzj20de0nb0wa.jpg)
+    1. 模拟器截图：
+    
+    ![first ans](https://wx1.sinaimg.cn/mw690/e9e52fd7gy1g1138t1xtzj20de0nb0wa.jpg)
 
 1. 利用ConstraintLayout实现如下
+
 ![second](https://wx2.sinaimg.cn/mw690/e9e52fd7gy1g113bsjv3uj20e308fjrb.jpg)
+
     1. 关键代码：
     1. 模拟器截图：
 1.  利用表格布局实现如下界：
