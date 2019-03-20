@@ -368,3 +368,87 @@
     1. 模拟器截图：
 
     ![third ans](https://img-blog.csdnimg.cn/20190313191256951.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQ3OTEzNA==,size_16,color_FFFFFF,t_70)
+
+1. 模拟器主界面（点击按钮跳转界面）
+
+    ![在这里插入图片描述](https://img-blog.csdnimg.cn/20190320114950425.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjQ3OTEzNA==,size_16,color_FFFFFF,t_70)
+    
+    1. 核心代码
+
+    index.xml
+
+    ```xml
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="148dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:text="LinearLayout" />
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="21dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:text="ConstraintLayout" />
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="154dp"
+        android:layout_height="29dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="1"
+        android:text="TableLayout" />
+    </LinearLayout> 
+    ```
+    MainAcitvity.java
+    ```java
+    import android.app.Activity;
+    import android.os.Bundle;
+    import android.widget.Button;
+    import android.view.View;
+    import android.content.Intent;
+
+    public class MainActivity extends Activity {
+        private Button button1,button2,button3;
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.index);
+            button2 = (Button) findViewById(R.id.button2);//id后面为上方button的id
+            button2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent=new Intent(MainActivity.this,SecondActivity.class);
+                    startActivity(intent);
+                }
+            });
+            button1 = (Button) findViewById(R.id.button1);//id后面为上方button的id
+            button1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent=new Intent(MainActivity.this,FirstActivity.class);
+                    startActivity(intent);
+                }
+            });
+            button3 = (Button) findViewById(R.id.button3);//id后面为上方button的id
+            button3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent=new Intent(MainActivity.this,ThirdActivity.class);
+                    startActivity(intent);
+                }
+            });
+        }
+    }
+    ```
